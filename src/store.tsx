@@ -261,7 +261,6 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     if (ready) AsyncStorage.setItem(KEY, JSON.stringify(state)).catch(() => {});
   }, [state, ready]);
 
-  if (!ready) return null;
   return <Context.Provider value={build(state, setState)}>{children}</Context.Provider>;
 }
 

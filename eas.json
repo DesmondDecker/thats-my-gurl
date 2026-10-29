@@ -3,10 +3,12 @@
   "build": {
     "preview": {
       "distribution": "internal",
+      "env": { "NPM_FLAGS": "--legacy-peer-deps" },
       "android": { "buildType": "apk" }
     },
     "production": {
       "autoIncrement": true,
+      "env": { "NPM_FLAGS": "--legacy-peer-deps" },
       "android": { "buildType": "app-bundle" }
     }
   }
